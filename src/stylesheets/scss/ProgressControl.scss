@@ -1,20 +1,29 @@
 .progress-control{
-  height: 108px;
-  margin-top: 48px;
+  /* display */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  /* box model */
+  height: 108px;
+  margin-top: 48px;
   border-top: 1px solid grey;
 }
 
 .return-step{
+  /* font & others */
   text-decoration: none;
   color: black;
 }
 
 .btn{
+  /* box model */
+  width: 174px;
+  height: 46px;
   border: none;
-  background-color: #F67599;
   border-radius: 8px;
+  
+  /* font & others */
+  background-color: #F67599;
   color: white;
 }

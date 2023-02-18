@@ -1,16 +1,14 @@
 .main-area{
-  /* box model */
-  width:600px;
+  /* display */
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  /* box model */
+  width:600px;
 }
 
 .container {
+  /* box model */
   width: 90%;
-}
-
-.btn {
-  width: 174px;
-  height: 46px;
 }

@@ -1,19 +1,23 @@
 .step-condition {
-  position: relative;
+  /* display */
   display: flex;
   justify-content: space-around;
+  /* box model */
   width: 475px;
 }
 
 .step-decoration::before {
-  content: "";
-  background-color: black;
+  /* box model */
   width: 55px;
   height: 1px;
   margin: 0 10px;
+  /* font & others */
+  content: "";
+  background-color: black;
 }
 
 .step {
+  /* display */
   display: flex;
   align-items: center;
 }
@@ -24,9 +28,9 @@
   height: 24px;
   justify-items: center;
   margin-right: 5px;
-  /* font & others */
   border: 1px solid black;
   border-radius: 50%;
+  /* font & others */
   color: black;
   text-align: center;
 }
