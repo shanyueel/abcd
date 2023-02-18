@@ -1,10 +1,14 @@
 import Button from "./ProgressControl/Button.js"
 
+import styles from "../../stylesheets/css/ProgressControl.css"
+
 export default function ProgressControl() {
   return(
-    <div className = "progress-control">
-      <a href="#" className="">← 上一步</a>
-      <Button title="下一步"/>
+    <div className = "container progress-control">
+      <div>
+        <a href="#" className="return-step">←  上一步</a>
+      </div>
+      <Button title="下一步  →"/>
     </div>
   )
 }

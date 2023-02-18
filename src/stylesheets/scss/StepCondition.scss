@@ -1,5 +1,33 @@
-$font-size: 18px;
+.step-condition{
+  position: relative;
+  display:flex;
+  justify-content: space-around;
+  width:475px;
+}
 
-.comment{
-  font-size: 0.8 * $font-size;
+.step-decoration::before{
+  content:"";
+  background-color: black;
+  width:55px;
+  height:1px;
+  margin:0 10px;
+  
+}
+
+.step{
+  display:flex;
+  align-items: center;
+}
+
+.step-circle {
+  /* box model */
+  width:24px;
+  height:24px;
+  justify-items: center;
+  margin-right:5px;
+  /* font & others */
+  border: 1px solid black;
+  border-radius: 50%;
+  color: black;
+  text-align: center;
 }

@@ -1,6 +1,7 @@
 import parse from "html-react-parser";
+import styles from "../../../stylesheets/css/FormArea.css"
 
-export default function Selector({ title,optionList,defaultOption }) {
+export default function Selector({ addClass,title,optionList,defaultOption }) {
   let optionsHTML = ""
 
   optionList.forEach((option)=>{
@@ -8,11 +9,9 @@ export default function Selector({ title,optionList,defaultOption }) {
   })
 
   // const optionsHTML = optionList.map(option => `<option value="${option.optionValue}">${option.optionName}</option>`)
-  
- console.log(optionsHTML)
 
   return(
-    <div className = "form-row">
+    <div className = {`form-row ${addClass}`}>
       <label>{title}</label>
       <select defaultValue={defaultOption} required>
         {parse(optionsHTML)}

@@ -1,0 +1,18 @@
+.main-area {
+  /* box model */
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+}
+
+.btn {
+  width: 174px;
+  height: 46px;
+}
+
+/*# sourceMappingURL=app.css.map */

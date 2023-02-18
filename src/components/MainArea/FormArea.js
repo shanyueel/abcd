@@ -1,6 +1,8 @@
 import Selector from "./FormArea/Selector.js"
 import TextInput from "./FormArea/TextInput.js"
 
+import styles from "../../stylesheets/css/FormArea.css"
+
 const genderOptions =[
   {optionName: "先生",
    optionValue: "male",},
@@ -18,18 +20,16 @@ const regionOptions =[
 
 export default function FormArea() {
   return(
-    <div className = "form-area">
-      <div className = "container">
-        <h2 className = "term-title">寄送地址</h2>
-        <form id ="form">
-          <Selector title="稱謂" optionList={genderOptions} defaultOption="male" />
-          <TextInput title="姓名" inputId="customer-name" holderText="請輸入姓名"/>
-          <TextInput title="電話" inputId="customer-phone" holderText="請輸入行動電話"/>
-          <TextInput title="Email" inputId="customer-email" holderText="請輸入電子郵件"/>
-          <Selector title="縣市" optionList={regionOptions} defaultOption="default" />
-          <TextInput title="地址" inputId="customer-address" holderText="請輸入地址"/>
-        </form>
-      </div>
+    <div className = "form-area container">
+      <h2 className = "term-title">寄送地址</h2>
+      <form id ="form" className="step-one-form">
+        <Selector addClass="costumer-title" title="稱謂" optionList={genderOptions} defaultOption="male" />
+        <TextInput addClass="costumer-name" title="姓名" inputId="customer-name" holderText="請輸入姓名"/>
+        <TextInput addClass="costumer-phone" title="電話" inputId="customer-phone" holderText="請輸入行動電話"/>
+        <TextInput addClass="costumer-email" title="Email" inputId="customer-email" holderText="請輸入電子郵件"/>
+        <Selector addClass="costumer-region" title="縣市" optionList={regionOptions} defaultOption="default" />
+        <TextInput addClass="costumer-address" title="地址" inputId="customer-address" holderText="請輸入地址"/>
+      </form>
     </div>
   )
 }
