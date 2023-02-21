@@ -1,4 +1,4 @@
-import Button from "./ProgressControl/Button.js"
+import Button from "./ProgressControl/Button.jsx"
 
 import styles from "../../stylesheets/css/ProgressControl.css"
 
