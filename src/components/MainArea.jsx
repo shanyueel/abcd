@@ -7,6 +7,7 @@ import styles from "../stylesheets/css/App.css"
 export default function MainArea() {
   return(
     <div className ="main-area">
+      <h1 className="container">結帳</h1>
       <StepCondition />
       <FormArea />
       <ProgressControl />

@@ -1,0 +1,95 @@
+.cart-title {
+  /* box model */
+  margin-top: 35px;
+  width: 80%;
+
+  /* font & others */
+  font-size: 18px;
+  text-align: start;
+}
+
+/* --- CartList --- */
+.cart-list {
+  /* display*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* box model */
+  width: 100%;
+  padding: 0;
+}
+
+li{
+  /* font & others */
+  list-style: none;
+}
+
+.product-line{
+  /* display */
+  display:flex;
+  justify-content: space-between;
+
+  /* box model */
+  height:100px;
+  width:80%;
+  margin-bottom:35px;
+}
+
+.product-picture{
+  /* box model */
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.product-detail {
+  width: 50%
+}
+
+.product-title {
+  /* box model */
+  margin: 0;
+}
+
+.product-amount{
+  /* display */
+  display: flex;
+  align-items: center;
+
+  /* box model */
+  margin-top: 18px;
+}
+
+.amount-display{
+  /* box model */
+  margin:0 25px;
+
+  /* font & others */
+  font-size: 14px;
+}
+
+.amount-miuns,
+.amount-plus{
+  /* box model */
+  width:27px;
+  height:27px;
+}
+
+.product-price{
+  /* box model */
+  margin:0;
+}
+
+/* --- Delivery Fee & TotalCost --- */
+.delivery-fee,
+.total-cost{
+  /* display */
+  display: flex;
+  justify-content: space-between;
+
+  /* box model */
+  width: 80%;
+  margin-bottom: 35px;  
+  border-top: 1px solid #F0F0F5;
+}
