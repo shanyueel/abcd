@@ -1,4 +1,4 @@
-import CartList from "../CartList/CartList.jsx"
+import CartListItem from "../CartList/CartListItem.jsx"
 import DeliveryFee from "../DeliveryFee/DeliveryFee.jsx"
 import TotalCost from "../TotalCost/TotalCost.jsx"
 
@@ -12,7 +12,9 @@ export default function Cart() {
         <div className="cart-title">
           <h3>購物籃</h3>
         </div>      
-        <CartList cartList={productsInCart}/>
+        <ul className = "cart-list">
+          {productsInCart.map(product => <CartListItem key={product.id} product={product} />)}
+        </ul>
         <DeliveryFee cartList={productsInCart} className="container"/>
         <TotalCost cartList={productsInCart}/>
     </div>
