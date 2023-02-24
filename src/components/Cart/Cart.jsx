@@ -1,4 +1,4 @@
-import CartListItem from "../CartList/CartListItem.jsx"
+import CartListItem from "../CartListItem/CartListItem.jsx"
 import DeliveryFee from "../DeliveryFee/DeliveryFee.jsx"
 import TotalCost from "../TotalCost/TotalCost.jsx"
 
