@@ -1,0 +1,49 @@
+.step {
+  /* display */
+  display: flex;
+  align-items: center;
+
+  /* font & others */
+  color: #AFB1BD;
+}
+
+.step-circle {
+  /* box model */
+  width: 24px;
+  height: 24px;
+  justify-items: center;
+  margin-right: 5px;
+  border: 1px solid #AFB1BD;
+  border-radius: 50%;
+  
+  /* font & others */
+  color: #AFB1BD;
+  text-align: center;
+}
+
+.step-title{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom:0;
+}
+
+
+.active {
+  /* font & others */
+  color: black;
+
+  .step-circle {
+    /* box model */
+    background-color: black;
+
+    /*font & others*/
+    color: white;
+    border-color: black;
+  }
+
+  +.connect-line {
+    /* box model */
+    background-color: black;
+  }
+}

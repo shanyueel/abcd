@@ -1,0 +1,20 @@
+.step-condition {
+  /* display */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* box model */
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.connect-line {
+  width: 4rem;
+  height: 0.1rem;
+  background-color: #AFB1BD;
+  margin: 0 auto;
+}
+
+
+

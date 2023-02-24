@@ -1,0 +1,12 @@
+.select-wrapper {
+  position: relative;
+}
+.select-wrapper::after {
+  /* position */
+  position: absolute;
+  right: 1rem;
+  top: 40%;
+  transform: translateY(-50%);
+  /* font & others */
+  content: url("../../assets/icon/rectangle_Down.svg");
+}/*# sourceMappingURL=Selector.css.map */

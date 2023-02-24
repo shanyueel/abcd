@@ -1,0 +1,50 @@
+.container {
+  /* box model */
+  width: 75%;
+  margin: 0 auto;
+}
+
+.main-area {
+  /* display */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* box model */
+  margin: 0 auto;
+  /* font & others */
+  text-align: left;
+}
+
+.main-title {
+  /* display */
+  align-self: flex-start;
+  /* box model*/
+  margin-bottom: 3rem;
+}
+
+.main-content {
+  /* display */
+  display: flex;
+  justify-content: space-between;
+  /* box model */
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* box model */
+  width: 50%;
+}
+
+.cart {
+  /* display */
+  display: flex;
+  justify-content: center;
+  /* box model */
+  width: 40%;
+  height: auto;
+  border: 1px solid #F0F0F5;
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=Main.css.map */
