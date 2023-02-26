@@ -17,6 +17,16 @@
   text-align: start;
 }
 
+.cart-list {
+  /* display*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* box model */
+  width: 100%;
+  margin-top: 2rem;
+}
+
 /* --- Delivery Fee & TotalCost --- */
 .delivery-fee,
 .total-cost {

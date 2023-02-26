@@ -1,0 +1,11 @@
+.form-content {
+  /* box model */
+  width: 100%;
+  height: 18rem;
+  margin-bottom: 3rem;
+}
+
+.form-title {
+  /* box model */
+  margin-bottom: 1.5rem;
+}/*# sourceMappingURL=StepTwoForm.css.map */

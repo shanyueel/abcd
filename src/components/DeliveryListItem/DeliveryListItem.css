@@ -1,0 +1,66 @@
+.delivery-line {
+  /* box model */
+  width: 435px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  padding: 12px 20px;
+  border: 1px solid #F0F0F5;
+  /* font & others */
+  cursor: pointer;
+}
+.delivery-line:has(.delivery-method-input:checked) {
+  border: 1px solid #2A2A2A;
+}
+
+.delivery-method {
+  /* display */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delivery-method-input {
+  /* display */
+  display: inline-block;
+  /* box model */
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+  /* font & others */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.delivery-method-input:checked {
+  /* font & others */
+  box-shadow: inset 0 0 0 6px #2A2A2A;
+}
+
+.delivery-method-info {
+  /* box model */
+  width: 75%;
+}
+.delivery-method-info .delivery-title {
+  /* font & others */
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  color: #000000;
+}
+.delivery-method-info .delivery-time {
+  /* font & others */
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #000000;
+}
+
+.delivery-method-fee {
+  /* display */
+  align-self: flex-start;
+  /* font & others */
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: #000000;
+}/*# sourceMappingURL=DeliveryListItem.css.map */

@@ -107,6 +107,16 @@ input:invalid {
   box-shadow: none;
 }
 
+input[type="radio"] {
+  margin: 0;
+}
+
+label{
+  margin: 0px;
+}
+
+
+
 ::-webkit-scrollbar {
   /* make scrollbar transparent */
   width: 0px;

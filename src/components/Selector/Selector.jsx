@@ -6,7 +6,7 @@ export default function Selector({ className,title,optionList,defaultOption }) {
 
   return(
     <div className = {`form-row ${className}`}>
-      <label>{title}</label>
+      <label className="selector-label">{title}</label>
       <div className="select-wrapper">
         <select defaultValue={defaultOption} required>
         {optionsHTML}

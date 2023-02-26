@@ -10,10 +10,13 @@
 }
 
 .connect-line {
+  /*box model*/
   width: 4rem;
   height: 0.1rem;
-  background-color: #AFB1BD;
   margin: 0 auto;
+
+  /* font & others */
+  background-color: #AFB1BD;
 }
 
 

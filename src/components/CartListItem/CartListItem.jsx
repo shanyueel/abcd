@@ -5,7 +5,44 @@ import styles from "./CartListItem.css"
 
 
 
-export default function CartListItem( {product} ) {
+export default function CartListItem( {product, currentProductsInCart, onCartChange} ) {
+  function handlePlusAmount(e){
+    const targetId = e.target.parentElement.id
+    const newProductsInCart = currentProductsInCart.map((product) =>{
+      if(product.id === targetId){
+        return(
+          { ...product, quantity: product.quantity + 1}
+        )
+      }else{
+        return(
+          product
+        )
+      }
+    })
+
+    onCartChange(newProductsInCart)
+  }
+
+  function handleMinusAmount(e) {
+    const targetId = e.target.parentElement.id
+    const newProductsInCart = currentProductsInCart.map((product) =>{
+      if(product.id === targetId && product.quantity > 1){
+        return(
+          { ...product, quantity: product.quantity - 1}
+        )
+      }else if(product.id === targetId && product.quantity === 1){
+        return(
+          {id: 0}
+        )
+      }else{
+        return(product)
+      }
+    })
+
+    const newProductsInCartAdjust = newProductsInCart.filter(product => product.id !== 0)
+    onCartChange(newProductsInCartAdjust)
+  }
+  
   return(
     <li className="product-line">
       <div className="product-picture-area">
@@ -14,9 +51,9 @@ export default function CartListItem( {product} ) {
       <div className="product-detail">
         <h4 className="product-title">{product.name}</h4>
         <div className="product-amount">
-          <div className="amount-minus"><img src={minusCircle} alt = "plus"/></div>
+          <button id={product.id} className="amount-adjust-icon minus" onClick={handleMinusAmount}><img src={minusCircle} alt = "plus"/></button>
           <div className="amount-display">{product.quantity}</div>
-          <div className="amount-plus"><img src={plusCircle} alt = "plus"/></div>
+          <button id={product.id} className="amount-adjust-icon plus" onClick={handlePlusAmount}><img src={plusCircle} alt = "plus"/></button>
         </div> 
       </div>
       <p className="product-price"><b>${product.quantity * product.price}</b></p>

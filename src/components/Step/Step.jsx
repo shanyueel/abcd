@@ -1,6 +1,6 @@
 import styles from "./Step.css"
 
-export default function Step({number, title, className}) {
+export default function Step({className, number, title}) {
   return(
     <div className = {`step ${className}`}>
       <div className ="step-circle">{number}</div>

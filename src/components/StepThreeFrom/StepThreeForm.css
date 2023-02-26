@@ -1,0 +1,31 @@
+.step-form {
+  /* display */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1.5rem 2rem;
+}
+
+.payment-name {
+  /* display */
+  grid-column: 1/5;
+  grid-row: 1/2;
+}
+
+.payment-card-number {
+  /* display */
+  grid-column: 1/5;
+  grid-row: 2/3;
+}
+
+.payment-card-expiration-date {
+  /* display */
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+
+.payment-card-security-code {
+  /* display */
+  grid-column: 4/7;
+  grid-row: 3/4;
+}/*# sourceMappingURL=StepThreeForm.css.map */

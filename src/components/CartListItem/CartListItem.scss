@@ -47,11 +47,12 @@
   font-weight: 500;
 }
 
-.amount-minus,
-.amount-plus {
+.amount-adjust-icon{
+  img{
   /* box model */
   width: 27px;
   height: 27px;
+  }
 }
 
 .product-price {

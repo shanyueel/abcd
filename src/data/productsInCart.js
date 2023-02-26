@@ -1,4 +1,4 @@
-export const productsInCart = [
+export const initialProductsInCart = [
   {
     id: '1',
     name: '貓咪罐罐',

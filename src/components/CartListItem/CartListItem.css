@@ -1,13 +1,3 @@
-.cart-list {
-  /* display*/
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* box model */
-  width: 100%;
-  margin-top: 2rem;
-}
-
 .product-line {
   /* display */
   display: flex;
@@ -54,8 +44,7 @@
   font-weight: 500;
 }
 
-.amount-minus,
-.amount-plus {
+.amount-adjust-icon img {
   /* box model */
   width: 27px;
   height: 27px;
@@ -64,4 +53,4 @@
 .product-price {
   /* box model */
   margin: 0;
-}/*# sourceMappingURL=CartList.css.map */
+}/*# sourceMappingURL=CartListItem.css.map */
