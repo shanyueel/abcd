@@ -27,6 +27,8 @@ nav {
 .nav-list .nav-list-item {
   /* box model */
   margin-right: 2rem;
+  /* font & others */
+  cursor: pointer;
 }
 
 .header-logo-name {
@@ -36,6 +38,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* font & others */
+  cursor: pointer;
 }
 .header-logo-name .alpha-shop-logo {
   /* box model */
@@ -63,4 +67,6 @@ nav {
   height: 24px;
   margin-left: 2rem;
   border: none;
+  /* font & others */
+  cursor: pointer;
 }/*# sourceMappingURL=Navbar.css.map */
