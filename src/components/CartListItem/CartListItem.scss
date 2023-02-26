@@ -56,6 +56,11 @@
 }
 
 .product-price {
+  /* display */
+  display: flex;
+  justify-content: flex-end;
+  
   /* box model */
+  width: 3rem;
   margin: 0;
 }
