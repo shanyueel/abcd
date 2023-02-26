@@ -1,7 +1,9 @@
 import React from "react"
 import { useState } from "react";
 
+import Navbar from "./components/Navbar/Navbar.jsx"
 import Main from "./components/Main/Main.jsx"
+import Footer from "./components/Footer/Footer.jsx"
 
 import styles from "./App.css"
 
@@ -10,7 +12,9 @@ export default function App() {
   
   return (
       <React.StrictMode>
-          <Main currentStep={step} onStepChange={setStep}/>
+        <Navbar />
+        <Main currentStep={step} onStepChange={setStep}/>
+        <Footer />
       </React.StrictMode>
   );
 }

@@ -1,0 +1,106 @@
+.footer-area{
+  /* box model */
+  width:100%;
+  height: 284px;
+  
+  /* font & others */
+  background-color: #F6F7F8;
+}
+
+.footer{
+  /* display */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  /* box model */
+  width: 100%;
+  height:100%;
+}
+
+.footer-logo-name{
+  /* display */
+  display: flex;
+  align-items: center;
+  
+  .alpha-shop-logo{
+    /* box model */
+    width: 31px;
+    height: 31px;
+    margin-right: 10px;
+  }
+
+  .alpha-shop-name{
+    /* box model */
+    width:135px;
+    height:20px;
+  }
+}
+
+.footer-lists{
+  /* display */
+  display: flex;
+  
+  .footer-list-area{
+    /* box model */
+    width: 96px; 
+    
+    .footer-list-line{
+      /* box model */
+      margin-bottom: 0.5rem;
+
+      /* font & others */
+        color: #808080;
+        font-weight: 400;
+        line-height: 1rem;
+    }
+  }
+
+  .customer-service,
+  .about-us{
+    /* box model */
+    margin-right: 120px; 
+  }
+}
+
+
+.footer-list-title,
+.footer-info-title{
+  /* box model */
+  margin-bottom: 2rem;
+
+  /* font & others */
+  color: #2A2A2A;
+}
+
+.footer-info{
+  /* display */
+  display: flex;
+  flex-direction: column;  
+}
+
+.footer-phone{
+  /* box model */
+  margin-bottom: 10px;
+
+  /* font & others */
+    color: #808080;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1rem;
+}
+
+.footer-icons{
+  /* display */
+  display: flex;
+  
+  /* font & others */
+  color: #808080;
+  
+  .footer-icon{
+    /* box model */
+    width:24px;
+    height:24px;
+    margin-right: 15px;
+  }
+}

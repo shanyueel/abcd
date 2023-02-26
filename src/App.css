@@ -114,11 +114,16 @@ input[type="radio"] {
 label{
   margin: 0px;
 }
-
-
-
 ::-webkit-scrollbar {
   /* make scrollbar transparent */
   width: 0px;
   background: transparent;
+}
+
+/* basic settings */
+.container {
+  /* box model */
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
 }
