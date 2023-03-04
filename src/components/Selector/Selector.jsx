@@ -1,14 +1,34 @@
+import { useContext } from "react"
 import styles from "./Selector.css"
 
-export default function Selector({ className,title,optionList,defaultOption }) {
+import { FormContext } from "../../context/FormContext"
 
-  const optionsHTML = optionList.map(option => <option key ={option.optionValue} value="{option.optionValue}">{option.optionName}</option>)
+export default function Selector({ className,title,optionList,defaultOption,onFormChange }) {
+  const currentFilledForm = useContext(FormContext)
+
+  function handleSelect(e) {
+    const target = e.target
+    
+    const selectorName = target.id
+    const selectedOption = target[target.selectedIndex].value
+
+    onFormChange({
+      ...currentFilledForm,
+      [selectorName]: selectedOption
+    })
+  }
+
+  const optionsHTML = optionList.map(option => {
+    return(
+      <option key ={option.optionValue} value={option.optionValue}>{option.optionName}</option>
+    )
+  })
 
   return(
     <div className = {`form-row ${className}`}>
       <label className="selector-label">{title}</label>
       <div className="select-wrapper">
-        <select defaultValue={defaultOption} required>
+        <select id={className} defaultValue={defaultOption} onChange={handleSelect} required>
         {optionsHTML}
       </select>
       </div>
