@@ -1,5 +1,3 @@
-// import styles from "../../stylesheets/css/Cart.css"
-
 export default function DeliveryFee() {
   return(
     <div className = "delivery-fee">

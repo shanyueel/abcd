@@ -1,49 +1,53 @@
+import { useContext } from "react"
+
 import plusCircle from "../../assets/icon/plus_circle.svg"
 import minusCircle from "../../assets/icon/minus_circle.svg"
 
 import styles from "./CartListItem.css"
+import { CartContext } from "../../context/CartContext"
 
+export default function CartListItem( {product, onCartChange} ) {
+const productsInCart = useContext(CartContext)
 
-
-export default function CartListItem( {product, currentProductsInCart, onCartChange} ) {
-  function handlePlusAmount(e){
-    const targetId = e.target.parentElement.id
-    const newProductsInCart = currentProductsInCart.map((product) =>{
-      if(product.id === targetId){
-        return(
-          { ...product, quantity: product.quantity + 1}
-        )
-      }else{
-        return(
-          product
-        )
-      }
-    })
-
-    onCartChange(newProductsInCart)
-  }
-
-  function handleMinusAmount(e) {
-    const targetId = e.target.parentElement.id
-    const newProductsInCart = currentProductsInCart.map((product) =>{
-      if(product.id === targetId && product.quantity > 1){
-        return(
-          { ...product, quantity: product.quantity - 1}
-        )
-      }else if(product.id === targetId && product.quantity === 1){
-        return(
-          {id: 0}
-        )
-      }else{
-        return(product)
-      }
-    })
-
-    const newProductsInCartAdjust = newProductsInCart.filter(product => product.id !== 0)
-    onCartChange(newProductsInCartAdjust)
-  }
+function handlePlusAmount(e){
+  const targetId = e.target.parentElement.id
+  const newProductsInCart = productsInCart.map((product) =>{
+    if(product.id === targetId){
+      return(
+        { ...product, quantity: product.quantity + 1}
+      )
+    }else{
+      return(
+        product
+      )
+    }
+  })
   
-  return(
+  onCartChange(newProductsInCart)
+}
+
+function handleMinusAmount(e) {
+  const targetId = e.target.parentElement.id
+  const newProductsInCart = productsInCart.map((product) =>{
+    if(product.id === targetId && product.quantity > 1){
+      return(
+        { ...product, quantity: product.quantity - 1}
+      )
+    }else if(product.id === targetId && product.quantity === 1){
+      return(
+        {id: 0}
+      )
+    }else{
+      return(product)
+    }
+  })
+
+  const newProductsInCartAdjust = newProductsInCart.filter(product => product.id !== 0)
+
+  onCartChange(newProductsInCartAdjust) 
+}
+
+  return(    
     <li className="product-line">
       <div className="product-picture-area">
         <img className="product-picture" src={product.img} alt="" />

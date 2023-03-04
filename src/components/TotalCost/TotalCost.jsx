@@ -1,7 +1,12 @@
-export default function TotalCost({cartList}) {
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
+
+export default function TotalCost() {
+  const productsInCart = useContext(CartContext)
+  
   let totalCostAmount=0
 
-  cartList.forEach(product=>{
+  productsInCart.forEach(product=>{
     totalCostAmount += product.price * product.quantity
   })
   
