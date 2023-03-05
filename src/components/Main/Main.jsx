@@ -19,8 +19,8 @@ export default function MainArea({currentStep, onStepChange}) {
   return(
     <div className ="main-area container">
       <h1 className="main-title">結帳</h1>
-      <div className="main-content">
-        <FormContext.Provider value={formContent} >
+      <FormContext.Provider value={formContent} >
+        <div className="main-content">        
           <div className="form">
             <StepCondition currentStep={currentStep} />
               {currentStep === 1 && <StepOneForm onFormChange={setFormContent} />}
@@ -28,11 +28,11 @@ export default function MainArea({currentStep, onStepChange}) {
               {currentStep === 3 && <StepThreeForm onFormChange={setFormContent} />}
             <ProgressControl currentStep={currentStep} onStepChange={onStepChange}/>
           </div>
-        </ FormContext.Provider>
-        <div className="cart">
-          <Cart />
+          <div className="cart">
+            <Cart />
+          </div>
         </div>
-      </div>
+      </ FormContext.Provider>
     </div>
   )
 }

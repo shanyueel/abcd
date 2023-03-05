@@ -8,7 +8,7 @@ export const deliveryMethods = [
   {
     id: "delivery-dhl",
     title: 'DHL運送',
-    time: '約 3~7 個工作天',
-    fee: '$500'
+    time: '48小時內送達',
+    fee: '500'
   }
 ]
