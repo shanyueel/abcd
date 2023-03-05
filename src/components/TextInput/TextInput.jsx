@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { useRef } from 'react'
 
 import { FormContext } from "../../context/FormContext"
 
@@ -16,7 +17,7 @@ export default function TextInput({inputId,title,holderText, onFormChange}) {
   return(
     <div className = {`form-row ${inputId}`}>
       <label className="text-input-label">{title}</label>
-      <input id = {inputId} type = "text" placeholder = {holderText} onChange={handleTextInput} />
+      <input id = {inputId} type = "text" placeholder = {holderText} onChange={handleTextInput} defaultValue={currentFilledForm[inputId]}/>
     </div>
   )
 }

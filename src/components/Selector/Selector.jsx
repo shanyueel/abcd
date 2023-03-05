@@ -1,9 +1,10 @@
+import {useState} from 'react'
 import { useContext } from "react"
 import styles from "./Selector.css"
 
 import { FormContext } from "../../context/FormContext"
 
-export default function Selector({ className,title,optionList,defaultOption,onFormChange }) {
+export default function Selector({ className,title,optionList,onFormChange }) {
   const currentFilledForm = useContext(FormContext)
 
   function handleSelect(e) {
@@ -20,7 +21,7 @@ export default function Selector({ className,title,optionList,defaultOption,onFo
 
   const optionsHTML = optionList.map(option => {
     return(
-      <option key ={option.optionValue} value={option.optionValue}>{option.optionName}</option>
+      <option key ={option.optionValue} value={option.optionValue} disabled={option.optionValue === "default"}>{option.optionName}</option>
     )
   })
 
@@ -28,7 +29,7 @@ export default function Selector({ className,title,optionList,defaultOption,onFo
     <div className = {`form-row ${className}`}>
       <label className="selector-label">{title}</label>
       <div className="select-wrapper">
-        <select id={className} defaultValue={defaultOption} onChange={handleSelect} required>
+        <select id={className} defaultValue={currentFilledForm.hasOwnProperty(className)?currentFilledForm[className]:"default"} onChange={handleSelect} required>
         {optionsHTML}
       </select>
       </div>

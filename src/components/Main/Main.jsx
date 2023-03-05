@@ -23,9 +23,9 @@ export default function MainArea({currentStep, onStepChange}) {
         <FormContext.Provider value={formContent} >
           <div className="form">
             <StepCondition currentStep={currentStep} />
-            {currentStep === 1 && <StepOneForm onFormChange={setFormContent} />}
-            {currentStep === 2 && <StepTwoForm onFormChange={setFormContent} />}
-            {currentStep === 3 && <StepThreeForm onFormChange={setFormContent} />}
+              {currentStep === 1 && <StepOneForm onFormChange={setFormContent} />}
+              {currentStep === 2 && <StepTwoForm onFormChange={setFormContent} />}
+              {currentStep === 3 && <StepThreeForm onFormChange={setFormContent} />}
             <ProgressControl currentStep={currentStep} onStepChange={onStepChange}/>
           </div>
         </ FormContext.Provider>

@@ -63,7 +63,7 @@ select {
   grid-row: 1/2;
 }
 
-.costumer-name {
+.costumer-fullName {
   /* display */
   grid-column: 3/7;
   grid-row: 1/2;
